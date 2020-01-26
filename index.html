@@ -75,8 +75,8 @@
 				</section>
 			
 
-				<section data-background-color="#354732" data-transition ="concave">
-				<section>
+				<section data-background-color="#354732" data-transition ="concave" >
+				<section data-background="https://www.nationalgeographic.com/content/dam/news/2016/05/23/rhino-horn/01-rhino-horn-trade-south-africa.ngsversion.1465488009592.adapt.1900.1.jpg">
 				<h3>Problem definition</h3>
 				</section>
 				<section data-transition ="concave">
@@ -108,14 +108,14 @@
 				<ul>
 
 					<li>Gain insight in <p style="display: inline;" class="fragment highlight-blue">potential poaching behaviour</p></li>
-					<li class="fragment fade-right">Create a platform that uses RL to create <p style="display: inline;" class="fragment highlight-blue">new policy standards</p>, train them and visualize their effects</li>
-					<li class="fragment fade-right">Provide <p style="display: inline;" class="fragment highlight-blue">potential policies</p> and their results <p style="display: inline;" class="fragment highlight-blue">after training</p></li>
-					<li class="fragment fade-right">Do research within RL and poaching behaviour</li>
+					<li class="fragment fade-right">Create a platform that uses RL to create <p style="display: inline;" class="fragment highlight-blue">new policies</p>, train them and visualize their effects</li>
+					<li class="fragment fade-right">Define a set of  <p style="display: inline;" class="fragment highlight-blue">pre-made policies</p> and their results <p style="display: inline;" class="fragment highlight-blue">after training</p></li>
+					<li class="fragment fade-right">Customize <p style="display: inline;" class="fragment highlight-blue">existing RL algorithms</p> to our specific case </li>
 				</ul>
 				</section>
 				<section data-transition="concave" style="font-size: 60px;">
 				
-					Allow further research to build onwards towards <p style="display: inline;" class="fragment highlight-green"><b>stopping poaching!</b></p>
+					Provide tools to do research to build towards <p style="display: inline;" class="fragment highlight-green"><b>stopping poaching!</b></p>
 
 				</section>
 			</section>
@@ -125,10 +125,9 @@
 			</section>
 			<section data-transition ="concave">
 				<ul>
-					<li>Technology that simulates <p style="display: inline;" class="fragment highlight-blue">potential strategies for agents</p> within the environment</li>
+					<li>Using algorithms to simulate <p style="display: inline;" class="fragment highlight-blue">potential strategies for agents</p> within the environment</li>
 					<li class="fragment fade-right">Machine learning that is not dependent on data <p style="display: inline;" class="fragment highlight-blue">but generates data!</p></li>
-					<li class="fragment fade-right">Allows simulations within certain policies by using <p style="display: inline;" class="fragment highlight-blue">reward systems and states</p> for the agents</li>
-					<li class="fragment fade-right">Being able to simplify the problem showcases understanding of the problem!</li>
+					<li class="fragment fade-right">Allowing to simulate certain policies by using <p style="display: inline;" class="fragment highlight-blue">reward systems and states</p> for the agents</li>
 				</ul>
 			</section>
 				<section data-transition="concave" style="font-size: 60px;">
@@ -142,9 +141,27 @@
 			<section data-background="https://i.pinimg.com/originals/4d/de/f1/4ddef18732b35ebab7372e1fbb01b8ce.gif" data-state="img-right">
 				<h3>Single-Agent</h3>
 			</section>
-			<section data-transition ="concave">1st slide</section>
-			<section data-transition ="concave">2nd slide</section>
-			<section data-transition ="concave">3rd slide</section>
+			<section data-transition ="concave">
+				<p>Resource game with two agents</p>
+				<p>Pac-man eats food, ghosts eat Pac-man</p>
+				<p>Pac-man maximizes to eating the food and not dying</p>
+				<p>Ghosts are rule-based</p>
+				<p></p>
+			</section>
+			<section data-transition ="concave">
+				<p>Altering the software to our problem</p>
+				<p>Poacher == Pac-man</p>
+				<p>Ghosts == Rangers</p>
+				<p>Food == animals</p>
+				<p>Only the poacher learns within the environment</p>
+				<p>Custom obstacle map and custom spawn points</p>
+			</section>
+			<section data-transition ="concave">
+				<p>Q-learning and approximate Q-learning</p>
+				<p></p>
+			</section>
+			<section data-transition ="concave">Demo</section>
+			<section data-transition ="concave">Why did we not stick to this system?</section>
 		</section>
 		<section data-background-color="#123532" data-transition ="concave">
 			<section data-background="https://techcrunch.com/wp-content/uploads/2019/09/hiders1.gif" data-state="img-right">
@@ -153,17 +170,43 @@
 				<h3>Multi-Agent</h3>
 
 			</section>
-			<section data-transition ="concave">1st slide</section>
-			<section data-transition ="concave">2nd slide</section>
-			<section data-transition ="concave">3rd slide</section>
+			<section data-transition ="concave">
+				<p>Green Security Games</p>
+				<p> DeDOL-algorithm</p>
+				<p>Base of our multi-agent approach</p>
+				<p>Includes many short-comings for our problem</p>
+				<p>FULLY altered - thus not described in detail</p>
+			</section>
+			<section data-transition ="concave">
+				<p>Game-rules</p>
+				<p>Poacher rules</p>
+				<p>Ranger rules</p>
+				<p>Environment includes different obstacles</p>
+				<p>Actions</p>
+			</section>
+			<section data-transition ="concave">
+				<p>Reward system</p>
+				<p>States</p>
+			</section>
+			<section data-transition ="concave">
+				<p>Kaart uitleggen adhv screenshot</p>
+			</section>
+			<section data-transition ="concave">
+				<p>Policies that we introduced</p>
+			</section>
 		</section>
 			<section data-background-color="#354732" data-transition ="concave">
 			<section data-transition="concave" data-background="https://media0.giphy.com/media/bZQvimlS7kuGc/giphy.gif?cid=790b7611fc26ecf2ef8821a9722f17f5d33a76eb12205e43&rid=giphy.gif">
 				<h3>How to use the system</h3>
 			</section>
-				<section data-transition ="concave">1st extra slide</section>
-				<section data-transition ="concave">2nd extra slide</section>
-				<section data-transition ="concave">3rd extra slide</section>
+				<section data-transition ="concave">
+					<p>Initial requirements</p>
+					<p>Python</p>
+					<p>Direnv</p>
+				</section>
+				<section data-transition ="concave">
+					<p>Video van de installment</p>
+				</section>
 			</section>
 			<section data-background-color="#843737" data-transition ="concave">
 			<section>
@@ -171,23 +214,34 @@
 				<h3>Results</h3>
 				<pre><code class="python">print("piemel")</code></pre>
 			</section>
-			<section data-transition ="concave">1st slide</section>
-			<section data-transition ="concave">2nd slide</section>
-			<section data-transition ="concave">3rd slide</section>
+			<section data-transition ="concave">alle policies??</section>
+			<section data-transition ="concave">
+				<p>Interesting poaching behavior</p>
+				<p>Not always interesting ranger behaviour</p>
+				<p>Noise is a large contribution to the behaviour of the ranger</p>
+			</section>
 		</section>
 		<section data-background-color="#93502F" data-transition ="concave">
 			<section>
 				<h3>Conclusion</h3>
 			</section>
-			<section data-transition ="concave">1st extra slide</section>
-			<section data-transition ="concave">2nd extra slide</section>
-			<section data-transition ="concave">3rd extra slide</section>
+			<section data-transition ="concave">
+				<p>Poaching behaviour waarschijnlijk goed in te schatten adhv RL</p>
+				<p>Ranger behaviour minder goed in te schatten</p>
+				<p>Platform behaald en toegankelijk voor de gebruiker</p>
+				<p></p>
+			</section>
 		</section>
 		<section data-background-color="#252A44" data-transition ="concave">
 			<section>
 				<h3>Discussion</h3>
 			</section>
-			<section data-transition ="concave">1st extra slide</section>
+			<section data-transition ="concave">
+				<p>Stel je weet veel van de rangers kun je rule-based te werk gaan</p>
+				<p>Verkleinen van de states voor de rangers</p>
+				<p>Computing power - meer training epochs wellicht?!</p>
+			</section>
+
 			<section data-transition ="concave">2nd extra slide</section>
 			<section data-transition ="concave">3rd extra slide</section>
 		</section>
