@@ -250,6 +250,20 @@ body {
   border-color: #a23;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
+
+.profile-pic {
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    width: 150px !important;
+    height: 150px !important;
+}
+
+
+.profile-div {
+    display: inline;
+    margin-right: 15px;
+}
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
