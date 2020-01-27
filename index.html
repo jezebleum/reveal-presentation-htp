@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="lib/css/monokai.css">
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
+
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -99,22 +100,26 @@
 				<section>
 				<h3>The research question</h3>
 				</section>
-				<section data-transition ="concave">
-				<div>
-					Which information is (most) necessary for the rangers to catch poachers <p style="display: inline;" class="fragment highlight-green">within a multi-agent RL environment</p>? </div>
 
 				<br>
-					<div class="fragment fade-up">What are the quality requirements for   <p style="display: inline;" class="fragment highlight-green">generated sensor-data</p>?</div>
+					
 				</ul>
-			</section>
 				<section data-transition="concave">
 				
-					<div style="font-size: 60px;">
-						How to deal with a lack of knowledge <p style="display: inline;" class="fragment highlight-green"><b>when trying to design a solution</b> in our case?</p>
+					<div style="font-size: 45px;">
+						Is RL a feasible approach for dealing with  <p style="display: inline;" class="fragment highlight-green"><b>the lack of knowledge </b></p>within our problem? </div>
+						<br>
+						<div class="fragment fade-up" style="font-size: 45px;"> If so, which algorithms are <p style="display: inline;" class="fragment highlight-green"><b>the most suitable</b></p>?
 					
 					</div>
 			</section>
+			<section data-transition ="concave">
+					<div>What are the quality requirements for   <p style="display: inline;" class="fragment highlight-green">generated sensor-data</p>?</div>
+					<br>
+				<div class="fragment fade-up">
+					Which information is (most) necessary for the rangers to catch poachers <p style="display: inline;" class="fragment highlight-green">within a multi-agent RL environment</p>? </div>
 		</section>
+	</section>
 				<section data-background-color="#843737" data-transition ="concave">
 
 					<section>
@@ -186,33 +191,55 @@
 			<section data-transition ="concave">Why did we not stick to this system?</section>
 		</section>
 		<section data-background-color="#123532" data-transition ="concave">
+            <style>
+                .container{
+                    display: flex;
+                }
+                .col{
+                    flex: 1;
+                }
+            </style>
 			<section data-background="https://techcrunch.com/wp-content/uploads/2019/09/hiders1.gif" data-state="img-right">
-
 
 				<h3>Multi-Agent</h3>
 
 			</section>
 			<section data-transition ="concave">
 				<p>Green Security Games</p>
-				<p> DeDOL-algorithm</p>
-				<p>Base of our multi-agent approach</p>
-				<p>Includes many short-comings for our problem</p>
-				<p>FULLY altered - thus not described in detail</p>
+				<p>DeDOL (Wang et al., 2019)</p>
+				<p>Rewrote more than half of the original program</p>
 			</section>
+            <section data-transition ="concave">
+
+                <div class="container">
+                    <div class="col">
+                        <p>Game-rules</p>
+                        <p>Poacher rules</p>
+                        <p>Ranger rules</p>
+                        <p>Environment includes different obstacles</p>
+                        <p>Actions</p>
+                    </div>
+
+                    <div class="col">
+                        <p>HIER MOET DE KAART</p>
+                    </div>
+                </div>
+                
+			</section>
+
 			<section data-transition ="concave">
-				<p>Game-rules</p>
-				<p>Poacher rules</p>
-				<p>Ranger rules</p>
-				<p>Environment includes different obstacles</p>
-				<p>Actions</p>
+                <div class="container">
+                    <div class="col">
+                        <p>Reward system</p>
+                        <p>States</p>
+                    </div>
+
+                    <div class="col">
+                        <p>HIER MOET DE KAART</p>
+                    </div>
+                </div>
 			</section>
-			<section data-transition ="concave">
-				<p>Reward system</p>
-				<p>States</p>
-			</section>
-			<section data-transition ="concave">
-				<p>Kaart uitleggen adhv screenshot</p>
-			</section>
+            
 			<section data-transition ="concave">
 				<p>Policies that we introduced</p>
 			</section>

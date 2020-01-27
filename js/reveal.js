@@ -6148,7 +6148,9 @@
 		registerKeyboardShortcut: function( key, value ) {
 			keyboardShortcuts[key] = value;
 		}
-	};
+	}
+	;
+
 
 	return Reveal;
 
