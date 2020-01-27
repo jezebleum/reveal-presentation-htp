@@ -25,7 +25,7 @@
 	</head>
 	<body>
 		<div class="reveal">
-			<div class="slides">
+			<h4 class="slides">
 				<section data-background="https://miro.medium.com/max/1002/1*7TLBg5I9DSrvVwebZoA6JQ.gif" data-state="img-right">
 					
 						<h3>Multi Agent Reinforcement Learning and Poaching Policies</h3>
@@ -294,11 +294,22 @@
                 <!--<div class="fragment fade-up">Adding <p style="display: inline;" class="fragment highlight-blue">observation cells</p> helps both agents but is less realistic on a big grid</div>-->
                 <div class="fragment fade-up"><p style="display: inline;" class="fragment highlight-blue">Detection chance variations</p> influence the variance of the ranger agent (following a single path)</div>
             </section>
-			<section data-transition ="concave">
-				<p>Interesting poaching behavior</p>
-				<p>Not always interesting ranger behaviour</p>
-				<p>Noise is a large contribution to the behaviour of the ranger</p>
-			</section>
+            <section data-transition="concave">
+                <h4>Research question 3</h4>
+                <div class="fragment fade-up">
+                    Which information is (most) necessary for the rangers to catch poachers <p style="display: inline;" class="fragment highlight-green">within a multi-agent RL environment</p>? </div>
+            </section>
+            <section data-transition ="concave">
+                <h4>Based on the policies we tested:</h4>
+                <br>
+                <div class="fragment fade-up">Adding <p style="display: inline;" class="fragment highlight-blue">observation cells</p> helps both agents but is less realistic on a big grid</div>
+                <br>
+                <div class="fragment fade-up">Exact location information is (as expected) much more beneficial for the ranger than noisy information.</div>
+                <br>
+                <div class="fragment fade-up">Assumption: less of a problem in real world.</div>
+                <br>
+                <div class="fragment fade-up"><b>Overall result: poachers learn much better than the rangers and start to show intelligent behaviour!</b></div>
+            </section>
 		</section>
 		<section data-background-color="#93502F" data-transition ="concave">
 			<section>
