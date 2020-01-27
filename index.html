@@ -316,24 +316,39 @@
 				<h3>Conclusion</h3>
 			</section>
 			<section data-transition ="concave">
-				<p>Poaching behaviour waarschijnlijk goed in te schatten adhv RL</p>
-				<p>Ranger behaviour minder goed in te schatten</p>
-				<p>Platform behaald en toegankelijk voor de gebruiker</p>
-				<p></p>
+                <div>(Deep) reinforcement learning provides a way to test changes in behaviour of the agents <p style="display: inline;" class="fragment highlight-blue">under different information policies</p></div>
+                <div style="padding-top: 40px;">Single-agent reinforcement learning <p style="display: inline;" class="fragment highlight-blue">converges</p> on a simple grid with controlled animal spawns, but is <p style="display: inline;" class="fragment highlight-red">too simplified</p></div>
 			</section>
+            <section>
+                <div>In the multi-agent system, the poacher agent shows interesting behaviour such as <p style="display: inline;" class="fragment highlight-blue">hunting close to home, avoiding bottlenecks and going back home to collect the reward</p></div>
+                <div style="padding-top: 40px;">The ranger agent does not seem to learn well despite having more information than the poacher. <p style="display: inline;" class="fragment highlight-blue">Signal noise seems to impact the process greatly</p></div>
+            </section>
 		</section>
 		<section data-background-color="#252A44" data-transition ="concave">
 			<section>
 				<h3>Discussion</h3>
 			</section>
 			<section data-transition ="concave">
-				<p>Stel je weet veel van de rangers kun je rule-based te werk gaan</p>
-				<p>Verkleinen van de states voor de rangers</p>
-				<p>Computing power - meer training epochs wellicht?!</p>
+                <h3>Heuristics based ranger agents</h3>
+                <div>Rule- or heuristic based ranger agents could improve the simulation greatly</div>
+                <div style="padding-top: 40px;">Challenge: defining realistic ranger heuristics</div>
 			</section>
 
-			<section data-transition ="concave">2nd extra slide</section>
-			<section data-transition ="concave">3rd extra slide</section>
+			<section data-transition ="concave">
+                <h3>State space</h3>
+                <div>The state space is very large: that is why tabular Q-learning performs badly</div>
+                <div style="padding-top: 40px;">Advantage of deep Q-learning: generalizing! Function instead of a table.</div>
+            </section>
+			<section data-transition ="concave">
+                <h3>Compute limitations</h3>
+                <div>GPU's are needed to computing the neural networks in deep Q-learning</div>
+                <div style="padding-top: 40px;">The memory limitations of keeping the Q values in memory for tabular Q-learning</div>
+            </section>
+            <section>
+                <h3>Observation cells</h3>
+                <div>Adding observation cells to the agents increases the state size which makes the model larger.</div>
+                <div style="padding-top: 40px;">Less realistic: people can't observe each other 10 km's away</div>
+            </section>
 		</section>
 
 			<section data-background-color="#123532" data-transition ="concave">
