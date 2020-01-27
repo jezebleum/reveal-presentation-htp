@@ -26,7 +26,7 @@
 	</head>
 	<body>
 		<div class="reveal">
-			<div class="slides">
+			<h4 class="slides">
 				<section data-background="https://miro.medium.com/max/1002/1*7TLBg5I9DSrvVwebZoA6JQ.gif" data-state="img-right">
 					
 						<h3>Multi Agent Reinforcement Learning and Poaching Policies</h3>
@@ -86,8 +86,7 @@
 
 				<br>
 					<div class="fragment fade-up">If no policies will be introduced, the rhino population in Africa will become  <p style="display: inline;" class="fragment highlight-red">extinct in 2035</p> (Barichievy et al., 2017)</div>
-				</ul>
-			</section>
+                </section>
 				<section data-transition="concave">
 				
 					<div style="font-size: 60px;">
@@ -130,7 +129,6 @@
                     Provide definition for policy explicity - 
                 </aside>
 				<ul>
-
 					<li>Gain insight in <p style="display: inline;" class="fragment highlight-blue">potential poaching behaviour</p></li>
 					<li class="fragment fade-right">Create a platform that uses RL to create <p style="display: inline;" class="fragment highlight-blue">new policies</p>, train them and visualize their effects</li>
 					<li class="fragment fade-right">Define a set of  <p style="display: inline;" class="fragment highlight-blue">pre-made policies</p> and their results <p style="display: inline;" class="fragment highlight-blue">after training</p></li>
@@ -166,25 +164,79 @@
 				<h3>Single-Agent</h3>
 			</section>
 			<section data-transition ="concave">
-				<p>Resource game with two agents</p>
-				<p>Pac-man eats food, ghosts eat Pac-man</p>
-				<p>Pac-man maximizes to eating the food and not dying</p>
-				<p>Ghosts are rule-based</p>
-				<p></p>
+                <ul>
+                    <li>Resource based game with <p style="display: inline;" class="fragment highlight-blue">two agent types</p></li>
+                    <li class="fragment fade-right">Pac-Man eats food, ghosts eat Pac-Man</li>
+                    <li class="fragment fade-right">Pac-man tries to <p style="display: inline;" class="fragment highlight-blue">maximize eaten food and not dying while doing so</p></li>
+                    <li class="fragment fade-right">Ghosts are <p style="display: inline;" class="fragment highlight-blue">rule-based</p></li>
+                </ul>
 			</section>
 			<section data-transition ="concave">
-				<p>Altering the software to our problem</p>
-				<p>Poacher == Pac-man</p>
-				<p>Ghosts == Rangers</p>
-				<p>Food == animals</p>
-				<p>Only the poacher learns within the environment</p>
-				<p>Custom obstacle map and custom spawn points</p>
+				<h4>Altering the software to our problem</h4>
+                <div>
+                    <img src="assets/small_rewards.png" style="width: 200px; display: inline-block; margin-right: 50px">
+                    <table style="display: inline-block;">
+                        <thead>
+                        <tr>
+                            <th>Pac-Man</th>
+                            <th>Hack the Poacher</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Pac-Man</td>
+                            <td>Poacher</td>
+                        </tr>
+                        <tr>
+                            <td>Ghost</td>
+                            <td>Ranger</td>
+                        </tr>
+                        <tr>
+                            <td>Food</td>
+                            <td>Animals</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="fragment fade-right" style="padding-top: 10px; padding-bottom: 10px"><p style="display: inline;" class="fragment highlight-blue">Only the poacher learns</p> within the environment!</div>
+                <div class="fragment fade-right">Custom obstacle map and <p style="display: inline;" class="fragment highlight-blue">custom spawn points</p></div>
 			</section>
 			<section data-transition ="concave">
-				<p>Q-learning and approximate Q-learning</p>
-				<p></p>
+				<h3>Q-learning and approximate Q-learning</h3>
 			</section>
+            <section data-transition ="concave">
+                <div><p style="display: inline;" class="fragment highlight-blue">Stochastic</p> environment with a static grid.</div>
+                <div>
+                    <img src="assets/mdp1.png" style="width: 150px; display: inline-block; position:relative; top: 40px; margin-right: 70px">
+                    <div class="fragment grow" style="display: inline-block; position: relative; bottom: 40px;"><p style="display: inline;" class="fragment highlight-green">Markov Decision Process</p><p style="display: inline;"></div>
+                    <p class="fragment fade-right" style="font-size: 25px; padding-top: 50px;">Outcome is partly random, partly based on the algorithm!</p>
+                    <div class="fragment fade-right" style="font-size: 25px; padding-top: 50px;"><p style="display: inline;" class="fragment highlight-red">Living penalty</p> - can't waste any time!</div>
+                </div>
+            </section>
+            <section data-transition ="concave">
+                <h4>Approximate Q-learning</h4>
+                <div style="padding-bottom: 50px;" class=" fragment highlight-green">Introduce heuristics to help the model</div>
+                <ul>
+                    <li class="fragment fade-right">Poacher is near a ranger ➟ run away!</li>
+                    <li class="fragment fade-right">An animal is within two cells distance ➟ poach the animal</li>
+                    <li class="fragment fade-right">Etc.</li>
+                </ul>
+            </section>
+			<section data-transition ="concave">
+                <div>
+                    <img src="assets/Pacman1crop.gif" style="display: inline-block; width: 300px; height: 330px; margin-right: 50px">
+                    <img src="assets/Pacman2crop.gif" style="display: inline-block; width: 300px; height: 330px">
+                </div>
+                <div>The agent converges on this 10x10 grid and even shows some interesting behaviour!</div>
+            </section>
 			<section data-transition ="concave">Why did we not stick to this system?</section>
+            <section data-transition ="concave">
+                <ul>
+                    <li>We want both agents to learn!</li>
+                    <li class="fragment fade-right">Not enough stochasticity in the way animals are poached</li>
+                    <li class="fragment fade-right">No way to add additional noise / information to the system</li>
+                </ul>
+            </section>
 		</section>
 		<section data-background-color="#123532" data-transition ="concave">
             <style>
@@ -237,51 +289,105 @@
 				<h3>How to use the system</h3>
 			</section>
 				<section data-transition ="concave">
-					<p>Initial requirements</p>
-					<p>Python</p>
-					<p>Direnv</p>
+					<h4>Requirements</h4>
+                    <div>
+                        <img src="assets/py.png" style="width: 300px; display: inline-block; background: none; box-shadow: none; border: none; padding-right: 50px">
+                        <p style="color: dodgerblue; font-size: 67px; display: inline-block; position: relative; bottom: 145px;">direnv</p>
+                    </div>
 				</section>
 				<section data-transition ="concave">
-					<p>Video van de installment</p>
+					<p>Video van de installation</p>
 				</section>
 			</section>
 			<section data-background-color="#843737" data-transition ="concave">
 			<section>
-
 				<h3>Results</h3>
-				<pre><code class="python">print("piemel")</code></pre>
 			</section>
-			<section data-transition ="concave">alle policies??</section>
+            <section data-transition ="concave">
+                <h4>Research question 1</h4>
+                <div style="font-size: 45px;">
+                    Is RL a feasible approach for dealing with  <p style="display: inline;" class="fragment highlight-green"><b>the lack of knowledge </b></p>within our problem? </div>
+                <br>
+                <div class="fragment fade-up" style="font-size: 45px;"> If so, which algorithms are <p style="display: inline;" class="fragment highlight-green"><b>the most suitable</b></p>?</div>
+            </section>
+            <section data-transition ="concave">
+                <div><p style="display: inline;" class="fragment highlight-green">Interesting</p> poaching behaviour</div>
+                <br>
+                <div><p style="display: inline;" class="fragment highlight-red">Fairly simple</p> ranger behaviour</div>
+                <br>
+                <div><p style="display: inline;" class="fragment highlight-blue">Multi-agent</p> allows for much more <p style="display: inline;" class="fragment highlight-blue">than single agent</p>, but more complex and less likely to converge</div>
+                <br>
+                <div><p style="display: inline;" class="fragment highlight-blue">Deep Q-learning</p> > tabular Q-learning and approximate Q-learning</div>
+            </section>
+            <section data-transition="concave">
+                <h4>Research question 2</h4>
+                <div style="font-size: 45px;">What are the quality requirements for   <p style="display: inline;" class="fragment highlight-green">generated sensor-data</p>?</div>
+            </section>
 			<section data-transition ="concave">
-				<p>Interesting poaching behavior</p>
-				<p>Not always interesting ranger behaviour</p>
-				<p>Noise is a large contribution to the behaviour of the ranger</p>
-			</section>
+                <h4>Based on the policies we tested:</h4>
+                <br>
+                <div class="fragment fade-up"><p style="display: inline;" class="fragment highlight-blue">Tourist noise</p> greatly distracts the ranger agent, often rendering it useless</div>
+                <br>
+                <div class="fragment fade-up"><p style="display: inline;" class="fragment highlight-blue">Filter blur</p> sends the ranger in the good direction, but performs worse than exact signal</div>
+                <br>
+                <!--<div class="fragment fade-up">Adding <p style="display: inline;" class="fragment highlight-blue">observation cells</p> helps both agents but is less realistic on a big grid</div>-->
+                <div class="fragment fade-up"><p style="display: inline;" class="fragment highlight-blue">Detection chance variations</p> influence the variance of the ranger agent (following a single path)</div>
+            </section>
+            <section data-transition="concave">
+                <h4>Research question 3</h4>
+                <div class="fragment fade-up">
+                    Which information is (most) necessary for the rangers to catch poachers <p style="display: inline;" class="fragment highlight-green">within a multi-agent RL environment</p>? </div>
+            </section>
+            <section data-transition ="concave">
+                <h4>Based on the policies we tested:</h4>
+                <br>
+                <div class="fragment fade-up">Adding <p style="display: inline;" class="fragment highlight-blue">observation cells</p> helps both agents but is less realistic on a big grid</div>
+                <br>
+                <div class="fragment fade-up">Exact location information is (as expected) much more beneficial for the ranger than noisy information.</div>
+                <br>
+                <div class="fragment fade-up">Assumption: less of a problem in real world.</div>
+                <br>
+                <div class="fragment fade-up"><b>Overall result: poachers learn much better than the rangers and start to show intelligent behaviour!</b></div>
+            </section>
 		</section>
 		<section data-background-color="#93502F" data-transition ="concave">
 			<section>
 				<h3>Conclusion</h3>
 			</section>
 			<section data-transition ="concave">
-				<p>Poaching behaviour waarschijnlijk goed in te schatten adhv RL</p>
-				<p>Ranger behaviour minder goed in te schatten</p>
-				<p>Platform behaald en toegankelijk voor de gebruiker</p>
-				<p></p>
+                <div>(Deep) reinforcement learning provides a way to test changes in behaviour of the agents <p style="display: inline;" class="fragment highlight-blue">under different information policies</p></div>
+                <div style="padding-top: 40px;">Single-agent reinforcement learning <p style="display: inline;" class="fragment highlight-blue">converges</p> on a simple grid with controlled animal spawns, but is <p style="display: inline;" class="fragment highlight-red">too simplified</p></div>
 			</section>
+            <section>
+                <div>In the multi-agent system, the poacher agent shows interesting behaviour such as <p style="display: inline;" class="fragment highlight-blue">hunting close to home, avoiding bottlenecks and going back home to collect the reward</p></div>
+                <div style="padding-top: 40px;">The ranger agent does not seem to learn well despite having more information than the poacher. <p style="display: inline;" class="fragment highlight-blue">Signal noise seems to impact the process greatly</p></div>
+            </section>
 		</section>
 		<section data-background-color="#252A44" data-transition ="concave">
 			<section>
 				<h3>Discussion</h3>
 			</section>
 			<section data-transition ="concave">
-				<p>If we know all the states of the rangers, perhaps rule-based instead of DQN</p>
-				<p>Based on our results, exact location information is necessary</p>
-				<p>Verkleinen van de states voor de rangers</p>
-				<p>Computing power - meer training epochs wellicht?!</p>
+                <h3>Heuristics based ranger agents</h3>
+                <div>Rule- or heuristic based ranger agents could improve the simulation greatly</div>
+                <div style="padding-top: 40px;"><p style="display: inline;" class="fragment highlight-blue">Challenge</p>: defining realistic ranger heuristics</div>
 			</section>
 
-			<section data-transition ="concave">2nd extra slide</section>
-			<section data-transition ="concave">3rd extra slide</section>
+			<section data-transition ="concave">
+                <h3>State space</h3>
+                <div><p style="display: inline;" class="fragment highlight-blue">The state space is very large</p>: that is why tabular Q-learning performs badly</div>
+                <div style="padding-top: 40px;">Advantage of deep Q-learning: <p style="display: inline;" class="fragment highlight-blue">generalizing!</p> Function instead of a table.</div>
+            </section>
+			<section data-transition ="concave">
+                <h3>Compute limitations</h3>
+                <div>GPU's are needed to computing the neural networks in deep Q-learning</div>
+                <div style="padding-top: 40px;"><p style="display: inline;" class="fragment highlight-blue">The memory limitations</p> of keeping the Q values in memory for tabular Q-learning</div>
+            </section>
+            <section>
+                <h3>Observation cells</h3>
+                <div>Adding observation cells to the agents <p style="display: inline;" class="fragment highlight-blue">increases the state size</p> which makes the model larger.</div>
+                <div style="padding-top: 40px;">Less realistic: people can't observe each other 10 km's away</div>
+            </section>
 		</section>
 
 			<section data-background-color="#123532" data-transition ="concave">
